@@ -6,8 +6,7 @@ class Animal:
     _DEGREE_OF_DANGER = 0
     def __init__(self, speed):
         self._cords = [0, 0, 0]
-        self.speed = speed
-        super().__init__()
+        self.speed = speed       
     def move(self, dx, dy, dz):
         if  self._cords[2] + self.speed * dz < 0:
             print('It\'s too deep, I can\'t dive :(')
@@ -30,7 +29,7 @@ class Bird(Animal):
     def __init__(self, speed):
         super().__init__(speed)
     def lay_eggs(self):
-        eggs_count = randint(1, 5)
+        eggs_count = randint(1, 4)
         if eggs_count == 1:
             print(f'Here is {eggs_count} egg for you.')
         else:
